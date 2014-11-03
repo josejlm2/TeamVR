@@ -712,7 +712,9 @@ public class OVRCameraController : MonoBehaviour
 	/// <returns>The camera depth.</returns>
 	public float GetCameraDepth()
 	{
-		return CameraMain.depth;
+    if (CameraMain != null)
+		  return CameraMain.depth;
+    return 0.0f;
 	}
 
 	// Get Misc. values from CameraController
